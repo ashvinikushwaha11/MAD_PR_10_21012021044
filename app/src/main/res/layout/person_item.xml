@@ -6,62 +6,93 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
-        android:id="@+id/materialCardView"
+        android:id="@+id/materialCardView1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="125dp"
+        android:layout_marginHorizontal="20dp"
+        android:elevation="20dp"
         app:cardCornerRadius="20dp"
-        app:layout_constraintTop_toTopOf="parent" >
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:padding="20dp">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/b1"
-                android:layout_width="84dp"
-                android:layout_height="80dp"
-                android:layout_marginStart="19dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginBottom="50dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="20dp"
                 app:icon="@drawable/round_person_24"
-                app:iconSize="40dp"
+                app:iconGravity="textStart"
+                app:iconSize="30dp"
+                app:iconPadding="1dp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.029"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/text1"
+                android:id="@+id/p_name1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="48dp"
+                android:layout_marginHorizontal="85dp"
+                android:layout_marginBottom="4dp"
                 android:text="Ashvini"
-                android:textSize="30sp"
-                app:layout_constraintStart_toEndOf="@id/b1"
-                tools:layout_editor_absoluteY="41dp" />
+                android:textSize="15sp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
+                android:id="@+id/p1_num"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="+91 9020301045 \n ashvini@gnu.ac.in"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/loc1"
-                app:layout_constraintStart_toEndOf="@+id/b1"
-                app:layout_constraintTop_toBottomOf="@+id/text1" />
+                android:text="+91 9020301045"
+                android:textSize="12sp"
+                android:layout_marginHorizontal="85dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/p_name1"/>
+
+            <TextView
+                android:id="@+id/p1_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ashvini@gnu.ac.in"
+                android:textSize="12sp"
+                android:layout_marginHorizontal="85dp"
+                android:layout_marginBottom="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p1_num"/>
+
+            <TextView
+                android:id="@+id/p1_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="85dp"
+                android:layout_marginBottom="4dp"
+                android:textSize="12sp"
+                android:text="Galaxy Recidancy \n Ahemedabad-382430"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/p1_email" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/loc1"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
-                android:layout_marginEnd="20dp"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
                 app:icon="@drawable/baseline_location_on_24"
-                app:iconSize="40dp"
+                app:iconPadding="1dp"
+                app:iconSize="30dp"
+                app:iconGravity="textStart"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
+
     </com.google.android.material.card.MaterialCardView>
 
 
