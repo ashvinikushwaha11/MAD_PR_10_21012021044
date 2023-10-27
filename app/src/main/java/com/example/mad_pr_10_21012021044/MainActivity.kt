@@ -23,7 +23,6 @@ class MainActivity : AppCompatActivity() {
         val btn_flt:FloatingActionButton=findViewById(R.id.floating_btn)
         btn_flt.setOnClickListener{
             setPersonDataToListView()
-            Intent(MainActivity@this,MapsActivity::class.java).also { startActivity(it) }
         }
     }
     fun setPersonDataToListView(){
