@@ -2,7 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <com.google.android.material.card.MaterialCardView
@@ -11,6 +11,7 @@
         android:layout_height="125dp"
         android:elevation="20dp"
         app:cardCornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -23,7 +24,6 @@
                 android:id="@+id/b1"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                android:layout_marginStart="20dp"
                 app:icon="@drawable/round_person_24"
                 app:iconGravity="textStart"
                 app:iconPadding="1dp"
@@ -37,10 +37,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="85dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginStart="10dp"
                 android:text="Ashvini"
                 android:textSize="15sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/b1"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
@@ -48,10 +48,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="85dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginStart="10dp"
                 android:text="+91 9020301045"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/b1"
                 app:layout_constraintTop_toBottomOf="@id/p_name1" />
 
             <TextView
@@ -59,10 +59,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="85dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginStart="10dp"
                 android:text="ashvini@gnu.ac.in"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/b1"
                 app:layout_constraintTop_toBottomOf="@+id/p1_num" />
 
             <TextView
@@ -70,16 +70,18 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="85dp"
-                android:layout_marginBottom="4dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="4dp"
                 android:text="Galaxy Recidancy \n Ahemedabad-382430"
                 android:textSize="12sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/b1"
                 app:layout_constraintTop_toBottomOf="@+id/p1_email" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/loc1"
                 android:layout_width="64dp"
                 android:layout_height="64dp"
+                android:layout_marginEnd="5dp"
                 app:icon="@drawable/baseline_location_on_24"
                 app:iconGravity="textStart"
                 app:iconPadding="1dp"
@@ -92,6 +94,15 @@
 
 
     </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.divider.MaterialDivider
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:dividerColor="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/materialCardView1"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </com.google.android.material.divider.MaterialDivider>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
