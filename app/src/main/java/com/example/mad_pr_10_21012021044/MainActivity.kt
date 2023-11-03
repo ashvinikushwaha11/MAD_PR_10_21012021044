@@ -1,6 +1,5 @@
 package com.example.mad_pr_10_21012021044
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ListView
@@ -20,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         personListView=findViewById(R.id.listview_main)
 
-        val btn_flt:FloatingActionButton=findViewById(R.id.floating_btn)
+        val btn_flt :FloatingActionButton=findViewById(R.id.floating_btn)
         btn_flt.setOnClickListener{
             setPersonDataToListView()
         }
@@ -40,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             try {
                 val data = HttpRequest().makeServiceCall(
                     "https://api.json-generator.com/templates/qjeKFdjkXCdK/data",
-                    "anckf6ysyjuvv9s2hn6yvtm1p55a7ol11j03ze7l")
+                    "463uju7rr7teg8g3gut6r299uy4dyuyewxtkxapf")
                 withContext(Dispatchers.Main) {
                     try {
                         if(data != null)
@@ -65,7 +64,7 @@ class MainActivity : AppCompatActivity() {
                 val person = Person(jsonObject)
                 personList.add(person)
             }
-            var listView1 : ListView = findViewById(R.id.listview_main)
+            val listView1 : ListView = findViewById(R.id.listview_main)
             listView1.adapter = PersonAdapter(this, personList)
         } catch (ee: JSONException) {
             ee.printStackTrace()
